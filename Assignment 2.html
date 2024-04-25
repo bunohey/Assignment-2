@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 2</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"></script>
+    <style>
+            .row{
+                margin-top:40px;
+            }
+            .left-column{
+                float:left;
+                width:30%;
+                margin-left:30px;
+            }
+            .center-column{
+                width:30%;
+                margin:auto;
+            }
+            .right-column{
+                float:right;
+                width:30%;
+                margin:auto;
+            }
+            .image-container{
+                display: table-cell;
+                vertical-align: middle;
+                margin: auto;
+            }
+    </style>
+    </head>
+    
+    <body style="background-color:azure;">
+
+        <div class="row">
+            <div class="left-column"><div class="image-container"><img id="map" src="img/3x/Asset 1@3x.png" height="200" width="200"></div></div></div>
+            <div class="right-column"><div class="image-container"><img id="uv index" src="img/3x/Asset 2@3x.png" height="200" width="200"></div></div></div>
+            <div class="center-column"><div class="image-container"><img id="weather" src="img/3x/Asset 3@3x.png" height="200" width="200"></div></div></div>
+
+        <div class="row">
+                <div class="left-column"><div class="image-container"><img id="global warming" src="img/3x/Asset 4@3x.png" height="130" width="210"></div></div>
+                <div class="right-column"><div class="image-container"><img id="fine dust" src="img/3x/Asset 5@3x.png" height="190" width="190"></div></div>
+                <div class="center-column"><div class="image-container"><img id="graph" src="img/3x/Asset 6@3x.png" height="180" width="190"></div></div>
+            </div>
+    
+        <div class="row">
+                <div class="left-column"><div class="image-container"><img id="earthquake" src="img/3x/Asset 7@3x.png" height="180" width="200"></div></div>
+                <div class="right-column"><div class="image-container"><img id="precipitation" src="img/3x/Asset 8@3x.png" height="190" width="200"></div></div>
+                <div class="center-column"><div class="image-container"><img id="marine" src="img/3x/Asset 9@3x.png" height="180" width="200"></div></div>
+            </div>
+
+        <script>
+            var sound1 = new buzz.sound("sound/map.mp3")
+            var sound2 = new buzz.sound("sound/weather.mp3")
+            var sound3 = new buzz.sound("sound/uv index.mp3")
+            var sound4 = new buzz.sound("sound/global warming.mp3")
+            var sound5 = new buzz.sound("sound/fine dust.mp3")
+            var sound6 = new buzz.sound("sound/graph.mp3")
+            var sound7 = new buzz.sound("sound/earthquake.mp3")
+            var sound8 = new buzz.sound("sound/precipitation.mp3")
+            var sound9 = new buzz.sound("sound/marine.mp3")
+
+
+
+            window.onload = function() {
+                document.getElementById('map').addEventListener('click', function () {sound1.play();});
+                document.getElementById('weather').addEventListener('click', function () {sound2.play(); });
+                document.getElementById('uv index').addEventListener('click', function () {sound3.play(); });
+                document.getElementById('global warming').addEventListener('click', function () {sound4.play(); });
+                document.getElementById('fine dust').addEventListener('click', function () {sound5.play(); }); 
+                document.getElementById('graph').addEventListener('click', function () {sound6.play(); }); 
+                document.getElementById('earthquake').addEventListener('click', function () {sound7.play(); }); 
+                document.getElementById('precipitation').addEventListener('click', function () {sound8.play(); }); 
+                document.getElementById('marine').addEventListener('click', function () {sound9.play(); });
+            };
+            </script>
+
+    </body>
+</html>
